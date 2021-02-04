@@ -1,0 +1,155 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans);
+
+* {
+  margin: 0;
+  padding: 0;
+  font-size: inherit;
+  color: inherit;
+  box-sizing: inherit;
+}
+
+html { box-sizing: border-box; }
+
+body {
+  background-color: #ecf0f1;
+  min-width: 300px;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+}
+
+h1, h2, h3, h4, h5 {
+  display: block;
+  font-weight: 400;
+}
+
+li, span, p, a, h1, h2, h3, h4, h5 { line-height: 1; }
+
+p { display: block; }
+
+a { text-decoration: none; }
+
+a:hover { text-decoration: underline; }
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  border: 0;
+}
+
+button {
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+}
+
+
+/* Reset */
+
+html, body { height: 100%; }
+
+.navigation-bar, .navigation-bar .navbox-tiles, .navbox-trigger, .navbox-tiles .tile, .navbox-tiles .tile .icon .fa, .navbox-tiles .tile .title {
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+.navbox-tiles:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+
+/* Core Styles */
+
+.navigation-bar {
+  height: 50px;
+  position: relative;
+  z-index: 1000;
+}
+
+.navigation-bar .bar {
+  background-color: #252525;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 2;
+}
+
+.navbox-trigger {
+  background-color: transparent;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.navbox-trigger .fa {
+  font-size: 20px;
+  color: #fff;
+}
+
+.navbox-trigger:hover { background-color: #484747; }
+
+
+/* TABS */
+
+.tab-container {
+  margin: 60px auto;
+  width: 70%;
+  max-width:500px;
+}
+
+.tab-auswahl li {
+  position:relative;
+  background-color: #fff;
+  color:#bcbcbc;
+  display: inline-block;
+  padding: 20px 40px;
+  opacity: 0.8;
+  cursor:pointer;
+  z-index:0;
+}
+
+.tab-auswahl li:hover {
+  color:#464646;
+}
+
+.tab-auswahl li.active {
+  color:#464646;
+  opacity: 1;
+}
+
+.tab-auswahl li.active:hover {
+  color:#464646;
+}
+
+.tab-inhalt > div {
+  background-color: #fff;
+  box-sizing:border-box;
+  width: 100%;
+  padding: 50px;
+  min-height:200px;
+  display:none;
+}
+
+.tab-inhalt > div.active {
+  display:block;
+}
+
+.line {
+  position:absolute;
+  width: 0;
+  height: 7px;
+  background-color: aqua;
+  top: 0;
+  left: 0;
+}
+
+.tab-auswahl li.active .line {
+  width: 100%;
+}
